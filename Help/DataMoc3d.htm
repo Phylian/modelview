@@ -1,0 +1,113 @@
+<html>
+
+<head>
+<title>MOC3D (Version 3.5) Data Requirements</title>
+<style>@import url(style.css);</style>
+<!--Popup Control-->
+<OBJECT
+  id=popup 
+  type="application/x-oleobject"
+  classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"
+>
+</OBJECT>
+<!--Popup Text-->
+<SCRIPT Language=JavaScript>
+    PopupFont="Arial,10,,plain"
+    cnoflo="CNOFLO is the concentration assigned to inactive (no flow) cells."
+    iconfm="ICONFM specifies the format for writing concentrations."
+    npntcl="NPNTCL specifies the times when concentrations are saved."
+    npntvl="NPNTVL specifies the times when velocities are saved."
+</SCRIPT>
+</head>
+
+<body>
+
+<h1>MOC3D (Version 3.5) Data Requirements</h1>
+
+<p>
+Date requirements for visualizing MOC3D (Version 3.5) results are as follows:
+</p>
+
+<ul>
+<li>The user must create a text file that specifies the top elevation of the 
+MOC3D model grid. This file is not need for running MOC3D, but is needed by 
+Model Viewer. <A href="TopElevationFile.htm">How to make the top elevation file.</a>
+<li>The input parameter 
+<A href="JavaScript:popup.TextPopup(cnoflo,PopupFont,9,9,-1,-1)">CNOFLO</A> must 
+be assigned a value that is different from 
+the simulated concentration at active cells. (<A href="#note1">See note 1 below.</a>)
+<li>Simulated <b>concentrations</b> must be saved to file at the end of one or more "particle moves". 
+The concentration file may be formatted or unformatted. (<A href="#note2">See note 2 below.</a>)
+For a formatted file, the input parameter 
+<A href="JavaScript:popup.TextPopup(iconfm,PopupFont,9,9,-1,-1)">ICONFM</A>
+should be greater than or equal to zero. 
+<li>To view <b>velocity</b> vectors, velocity must be saved to file. 
+The velocity file may be be formatted or unformatted. (<A href="#note2">See note 2 below.</a>)
+The input parameter 
+<A href="JavaScript:popup.TextPopup(npntvl,PopupFont,9,9,-1,-1)">NPNTVL</A>
+should be assigned a value that depends on the
+input parameter
+<A href="JavaScript:popup.TextPopup(npntcl,PopupFont,9,9,-1,-1)">NPNTCL</A> according to the following table:</li>
+    
+</ul>
+
+<p align="center">
+
+<table width="304" border=1 cellspacing=1 cellpadding=1>
+	<tr>
+		<td width="150" align="middle">If NPNTCL is</td>
+		<td width="150" align="middle">Then set NPNTVL to</td>
+	</tr>
+	<tr>
+		<td align="middle">-2</td>
+		<td align="middle">-1</td>
+	</tr>
+	<tr>
+		<td align="middle">-1</td>
+		<td align="middle">1</td>
+	</tr>
+	<tr>
+		<td align="middle">0</td>
+		<td align="middle">0</td>
+	</tr>
+	<tr>
+		<td align="middle">greater than 0</td>
+		<td align="middle">1</td>
+	</tr>
+</table>
+</p>
+
+
+<p>
+
+</p>
+
+<ul>
+<li>To view <b>particle</b>, particle locations must be saved to file. 
+The particle location file may be be formatted or unformatted. (<a href="#note2">See note 2 below.</a>)
+The input parameter 
+<A HREF="JavaScript:popup.TextPopup(npntpl,PopupFont,9,9,-1,-1)">NPNTPL</a>
+should be assigned the same value as the input parameter 
+<A HREF="JavaScript:popup.TextPopup(npntcl,PopupFont,9,9,-1,-1)">NPNTCL</a>.
+</ul>
+
+<h3>Notes:</h3>
+
+<ol>
+<a name="note1"></a><li>If the simulated concentration at a cell is equal to
+CNOFLO, Model Viewer assumes that the cell is inactive and will not display it. 
+Therefore, the common practice of setting CNOFLO to zero should be avoided 
+if concentrations at active cells might also be zero. Another 
+consideration is to avoid truncation error. For example, setting CNOFLO 
+to 99.999 should be avoided because the output might not be written with 
+adequate precision. Instead, it is recommended that CNOFLO be set 
+to a large negative integer such as <nobr>-1.0E10</nobr>.
+<a name="note2"></a><li>Model Viewer reads unformatted files much more 
+  quickly than formatted files. Therefore, for a faster animation, the 
+  concentration file (and velocity file, if saved) should be unformatted.</li>           
+             
+             
+</ol> 
+
+</body>
+</html>

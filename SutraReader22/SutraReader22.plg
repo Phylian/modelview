@@ -1,0 +1,30 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SutraReader22 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP45.tmp" with contents
+[
+/assume:underscore /compile_only /include:"Release/" /dll /nologo /warn:nofileopt /module:"Release/" /object:"Release/" 
+"D:\Mv\mv_branch2\SutraReader22\sutra_2_2.f"
+]
+<h3>Output Window</h3>
+Compiling Fortran...
+D:\Mv\mv_branch2\SutraReader22\sutra_2_2.f
+D:\Mv\mv_branch2\SutraReader22\sutra_2_2.f(4949) : Warning: Variable IFREEZ is used before its value has been defined
+         ELSE IF (IFREEZ.NE.0) THEN
+------------------^
+D:\Mv\mv_branch2\SutraReader22\sutra_2_2.f(3801) : Warning: Variable TICS0 is used before its value has been defined
+            TREF = TICS0                                                 INDAT0.......53400
+-------------------^
+
+
+
+<h3>Results</h3>
+sutra_2_2.obj - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

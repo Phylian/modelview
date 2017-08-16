@@ -1,0 +1,88 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Modflow96Reader - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP81.tmp" with contents
+[
+/assume:underscore /check:bounds /compile_only /debug:full /iface:nomixed_str_len_arg /include:"Debug/" /dll /names:lowercase /nologo /traceback /warn:argument_checking /warn:nofileopt /module:"Debug/" /object:"Debug/" /pdbfile:"Debug/DF60.PDB" 
+"D:\Mv\mv_branch2\Modflow96Reader\MfBasic.f"
+"D:\Mv\mv_branch2\Modflow96Reader\WEL5.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\Utl5.for"
+"D:\Mv\mv_branch2\Modflow96Reader\STR1.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\RIV5.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\RES1.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\Mf96Module.f"
+"D:\Mv\mv_branch2\Modflow96Reader\Modflow96Reader.f"
+"D:\Mv\mv_branch2\Modflow96Reader\Mf96common.f"
+"D:\Mv\mv_branch2\Modflow96Reader\mc3CustomRead.f"
+"D:\Mv\mv_branch2\Modflow96Reader\IBS1.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\GHB5.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\FHB1.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\DRN5.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\CHD1.FOR"
+"D:\Mv\mv_branch2\Modflow96Reader\Bcf5.for"
+"D:\Mv\mv_branch2\Modflow96Reader\Bas5.for"
+]
+Creating temporary file "C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP82.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /profile /debug /machine:I386 /out:"Debug/mf96_r.dll" /implib:"Debug/mf96_r.lib" 
+.\Debug\BAS5.OBJ
+.\Debug\BCF5.OBJ
+.\Debug\CHD1.OBJ
+.\Debug\DRN5.OBJ
+.\Debug\FHB1.OBJ
+.\Debug\GHB5.OBJ
+.\Debug\IBS1.OBJ
+.\Debug\mc3CustomRead.obj
+.\Debug\Mf96common.obj
+.\Debug\Mf96Module.obj
+.\Debug\MfBasic.obj
+.\Debug\Modflow96Reader.obj
+.\Debug\RES1.OBJ
+.\Debug\RIV5.OBJ
+.\Debug\STR1.OBJ
+.\Debug\UTL5.OBJ
+.\Debug\WEL5.OBJ
+]
+Creating command line "link.exe @C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP82.tmp"
+<h3>Output Window</h3>
+Compiling Fortran...
+D:\Mv\mv_branch2\Modflow96Reader\MfBasic.f
+D:\Mv\mv_branch2\Modflow96Reader\WEL5.FOR
+D:\Mv\mv_branch2\Modflow96Reader\Utl5.for
+D:\Mv\mv_branch2\Modflow96Reader\STR1.FOR
+D:\Mv\mv_branch2\Modflow96Reader\RIV5.FOR
+D:\Mv\mv_branch2\Modflow96Reader\RES1.FOR
+D:\Mv\mv_branch2\Modflow96Reader\Mf96Module.f
+D:\Mv\mv_branch2\Modflow96Reader\Modflow96Reader.f
+D:\Mv\mv_branch2\Modflow96Reader\Mf96common.f
+D:\Mv\mv_branch2\Modflow96Reader\mc3CustomRead.f
+D:\Mv\mv_branch2\Modflow96Reader\IBS1.FOR
+D:\Mv\mv_branch2\Modflow96Reader\GHB5.FOR
+D:\Mv\mv_branch2\Modflow96Reader\FHB1.FOR
+D:\Mv\mv_branch2\Modflow96Reader\DRN5.FOR
+D:\Mv\mv_branch2\Modflow96Reader\CHD1.FOR
+D:\Mv\mv_branch2\Modflow96Reader\Bcf5.for
+D:\Mv\mv_branch2\Modflow96Reader\Bas5.for
+Linking...
+   Creating library Debug/mf96_r.lib and object Debug/mf96_r.exp
+Creating temporary file "C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP86.bat" with contents
+[
+@echo off
+copy .\Debug\mf96_r.dll ..\ModelViewer\Debug\mf96_r.dll
+]
+Creating command line "C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP86.bat"
+
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+mf96_r.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

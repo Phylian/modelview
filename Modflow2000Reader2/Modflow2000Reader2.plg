@@ -1,0 +1,127 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Modflow2000Reader2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP77.tmp" with contents
+[
+/assume:underscore /check:bounds /compile_only /convert:big_endian /debug:full /iface:nomixed_str_len_arg /include:"Debug/" /dll /names:lowercase /nologo /traceback /warn:argument_checking /warn:nofileopt /module:"Debug/" /object:"Debug/" /pdbfile:"Debug/DF60.PDB" 
+"D:\Mv\mv_branch2\Modflow96Reader\MfBasic.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\utl6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\sen.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\RES1.FOR"
+"D:\Mv\mv_branch2\Modflow2000Reader\parutl1.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1sub1.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\Modflow2000Module.f"
+"D:\Mv\mv_branch2\Modflow2000Reader2\Modflow2000Reader2.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\Modflow2000Common.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\lak.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\hufutl2.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwtCustomRead.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1wel6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\GWF1STR6.F"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1sfr1.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1riv6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1mnw1.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1lpf1.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1ibs6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1huf2.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1ghb6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1drt1.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1drn6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1chd6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1bcf6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gwf1bas6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\gutsdaf.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\glo1bas6.f"
+"D:\Mv\mv_branch2\Modflow2000Reader\FHB1.FOR"
+"D:\Mv\mv_branch2\Modflow2000Reader\daf1.f"
+]
+Creating temporary file "C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP78.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /profile /debug /machine:I386 /out:"Debug/mf2k_r2.dll" /implib:"Debug/mf2k_r2.lib" 
+.\Debug\daf1.obj
+.\Debug\FHB1.OBJ
+.\Debug\glo1bas6.obj
+.\Debug\gutsdaf.obj
+.\Debug\gwf1bas6.obj
+.\Debug\gwf1bcf6.obj
+.\Debug\gwf1chd6.obj
+.\Debug\gwf1drn6.obj
+.\Debug\gwf1drt1.obj
+.\Debug\gwf1ghb6.obj
+.\Debug\gwf1huf2.obj
+.\Debug\gwf1ibs6.obj
+.\Debug\gwf1lpf1.obj
+.\Debug\gwf1mnw1.obj
+.\Debug\gwf1riv6.obj
+.\Debug\gwf1sfr1.obj
+.\Debug\GWF1STR6.OBJ
+.\Debug\gwf1sub1.obj
+.\Debug\gwf1wel6.obj
+.\Debug\gwtCustomRead.obj
+.\Debug\hufutl2.obj
+.\Debug\lak.obj
+.\Debug\MfBasic.obj
+.\Debug\Modflow2000Common.obj
+.\Debug\Modflow2000Module.obj
+.\Debug\Modflow2000Reader2.obj
+.\Debug\parutl1.obj
+.\Debug\RES1.OBJ
+.\Debug\sen.obj
+.\Debug\utl6.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP78.tmp"
+<h3>Output Window</h3>
+Compiling Fortran...
+D:\Mv\mv_branch2\Modflow96Reader\MfBasic.f
+D:\Mv\mv_branch2\Modflow2000Reader\utl6.f
+D:\Mv\mv_branch2\Modflow2000Reader\sen.f
+D:\Mv\mv_branch2\Modflow2000Reader\RES1.FOR
+D:\Mv\mv_branch2\Modflow2000Reader\parutl1.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1sub1.f
+D:\Mv\mv_branch2\Modflow2000Reader\Modflow2000Module.f
+D:\Mv\mv_branch2\Modflow2000Reader2\Modflow2000Reader2.f
+D:\Mv\mv_branch2\Modflow2000Reader\Modflow2000Common.f
+D:\Mv\mv_branch2\Modflow2000Reader\lak.f
+D:\Mv\mv_branch2\Modflow2000Reader\hufutl2.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwtCustomRead.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1wel6.f
+D:\Mv\mv_branch2\Modflow2000Reader\GWF1STR6.F
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1sfr1.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1riv6.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1mnw1.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1lpf1.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1ibs6.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1huf2.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1ghb6.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1drt1.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1drn6.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1chd6.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1bcf6.f
+D:\Mv\mv_branch2\Modflow2000Reader\gwf1bas6.f
+D:\Mv\mv_branch2\Modflow2000Reader\gutsdaf.f
+D:\Mv\mv_branch2\Modflow2000Reader\glo1bas6.f
+D:\Mv\mv_branch2\Modflow2000Reader\FHB1.FOR
+D:\Mv\mv_branch2\Modflow2000Reader\daf1.f
+Linking...
+   Creating library Debug/mf2k_r2.lib and object Debug/mf2k_r2.exp
+Creating temporary file "C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP7C.bat" with contents
+[
+@echo off
+copy .\Debug\mf2k_r2.dll ..\ModelViewer\Debug\mf2k_r2.dll
+]
+Creating command line "C:\DOCUME~1\RBWINS~1.RBW\LOCALS~1\Temp\RSP7C.bat"
+
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+mf2k_r2.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

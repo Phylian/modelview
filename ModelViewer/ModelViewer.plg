@@ -1,0 +1,100 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ModelViewer - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/ModelViewer.res" /d "NDEBUG" "D:\Mv\mv_branch2\ModelViewer\ModelViewer.rc"" 
+Creating temporary file "C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP39.tmp" with contents
+[
+vtkCommon.lib vtkGraphics.lib vtkImaging.lib vtkFiltering.lib vtkRendering.lib mv.lib htmlhelp.lib sutr_r.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/modview.pdb" /machine:I386 /out:"Release\modview.exe" /libpath:"C:\Program Files\vtk40\lib\vtk" /libpath:"..\mv\Release" /libpath:"..\SutraReader\Release" /libpath:"C:\Program Files\HTML Help Workshop\lib" 
+.\Release\AnimationControlsPage.obj
+.\Release\AnimationDlg.obj
+.\Release\AnimationOptionsPage.obj
+.\Release\AxesDlg.obj
+.\Release\AxesPage.obj
+.\Release\BackgroundPage.obj
+.\Release\BitmapResolutionDlg.obj
+.\Release\BoundingBoxPage.obj
+.\Release\ColorBarColorsPage.obj
+.\Release\ColorBarDataSource.obj
+.\Release\ColorBarDlg.obj
+.\Release\ColorBarLimitsPage.obj
+.\Release\ColorBarPreviewListBox.obj
+.\Release\ColorBarSizePage.obj
+.\Release\ColorBarTextPage.obj
+.\Release\CropControlsPage.obj
+.\Release\CropDlg.obj
+.\Release\CropOptionsPage.obj
+.\Release\CropVectorsPage.obj
+.\Release\CustomIsosurfacePage.obj
+.\Release\DataDlg.obj
+.\Release\DataFilesDialog.obj
+.\Release\DataSelectionDlg.obj
+.\Release\DisplaySizeDlg.obj
+.\Release\ExportAnimationDlg.obj
+.\Release\GeometryDlg.obj
+.\Release\GridDlg.obj
+.\Release\GridLinesPage.obj
+.\Release\GridShellPage.obj
+.\Release\ImageGenerationDlg.obj
+.\Release\IsosurfaceDlg.obj
+.\Release\LightingDlg.obj
+.\Release\LightsPage.obj
+.\Release\LogTransformAxes.obj
+.\Release\MainFrm.obj
+.\Release\Mf2kgwtDataFilesDlg.obj
+.\Release\Moc3dDataFilesDlg.obj
+.\Release\ModelFeatureListBox.obj
+.\Release\ModelFeaturesDlg.obj
+.\Release\ModelSelectionDlg.obj
+.\Release\ModelViewer.obj
+.\Release\Modflow2000DataFilesDlg.obj
+.\Release\Modflow96DataFilesDlg.obj
+.\Release\Mt3dmsDataFilesDlg.obj
+.\Release\Mvdoc.obj
+.\Release\Mvview.obj
+.\Release\OverlayBoundsPage.obj
+.\Release\OverlayControlsPage.obj
+.\Release\OverlayDlg.obj
+.\Release\OverlayFilePage.obj
+.\Release\ParticlesDlg.obj
+.\Release\PathlineDataPage.obj
+.\Release\PathlinesClippingPage.obj
+.\Release\PathlinesColorPage.obj
+.\Release\PathlinesDisplayPage.obj
+.\Release\PathlinesDlg.obj
+.\Release\PhastDataFilesDlg.obj
+.\Release\PreferencesDlg.obj
+.\Release\ProgressWnd.obj
+.\Release\RegularIsosurfacePage.obj
+.\Release\ScalarDataPage.obj
+.\Release\ScalePage.obj
+.\Release\SolidDlg.obj
+.\Release\StdAfx.obj
+.\Release\SubgridPage.obj
+.\Release\SurfacePage.obj
+.\Release\SutraDataFilesDlg.obj
+.\Release\UcodeDataFileDlg.obj
+.\Release\VectorControlsPage.obj
+.\Release\VectorDataPage.obj
+.\Release\VectorDlg.obj
+.\Release\VectorOptionsPage.obj
+.\Release\VectorThresholdPage.obj
+.\Release\ModelViewer.res
+\Mv\mv_branch2\mv\Release\mv.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP39.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+modview.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Modflow2000Reader - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP3F.tmp" with contents
+[
+/assume:underscore /compile_only /iface:nomixed_str_len_arg /include:"Release/" /dll /names:lowercase /nologo /warn:nofileopt /module:"Release/" /object:"Release/" 
+"D:\Mv\mv_branch2\Modflow2000Reader\glo1bas6.f"
+]
+<h3>Output Window</h3>
+Compiling Fortran...
+D:\Mv\mv_branch2\Modflow2000Reader\glo1bas6.f
+
+
+
+<h3>Results</h3>
+glo1bas6.obj - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

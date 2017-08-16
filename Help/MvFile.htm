@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<title>The MV File</title>
+<style>@import url(style.css);</style>
+</head>
+
+<body>
+
+<h1>The MV File</h1>
+
+<ul>
+<li>The <b>MV file</b> is used by Model Viewer to keep track 
+of the model data and display settings for a particular set of
+simulation results (model run). This file has a name 
+that ends with <b><i>.mv</i></b>.
+
+<li>The <b>New</b>, <b>Open</b>, <b>Close</b>, <b>Save</b> and 
+<b>Save As</b> commands (under the <b>File</b> menu) operate on MV files. 
+
+<li>The <b>New</b> command begins the process of creating a new MV file.
+You will be asked to <A href="LoadModelData.htm">load model data</A>.
+
+<li>When you <b>save</b> an MV file, Model Viewer writes the following 
+information to disk: the type of model, the names of model data files, 
+and all current display settings. Note that the MV file does not contain the 
+actual model data.
+
+<li>The MV file for a particular model run must be save to a specific folder:
+    <ul>
+    <li>For MODFLOW-2005, MODFLOW-2000, MODFLOW-2000 GWT, MODFLOW-96, and MOC3D, the MV file
+    must be save to folder containing the "name" file.
+    <li>For MT3DMS, the MV file must be saved to the folder 
+    containing the "cnf" file.</li>              
+    <li>For SUTRA, the MV file must be saved to the folder containing the "nod" file.
+    <li >For PHAST, the MV file must be saved to the folder containing the "h5" file.</li>
+    <li >For UCODE, the MV file must be saved to the folder containing the "_sos" file.</li>
+    </ul>
+    
+<li>When you <b>open</b> an MV file, Model Viewer loads the model data and sets 
+the display according to the information saved in the MV file. 
+
+<li>When you <b>close</b> an MV file, Model Viewer terminates the display of data. 
+The program window becomes blank. The Close command is useful during repeated
+cycles of running a model and viewing the results. While model results are 
+displayed in Model Viewer, the model data files cannot be over-written 
+by another program. Closing the MV file releases the model data files 
+so that the model can run to generate a new set of results.
+
+<li>Every time you change a display setting (for example, the 
+  color bar limits), the current MV file is considered to have been changed. If 
+  you did not saved the MV file after the changes, and you try to (a) create a 
+  new MV file, or (b) close the current MV file, or (c) exit Model Viewer, you 
+  will be prompted to save the MV file before continuing.</li>           
+              
+                  
+               
+      
+
+</ul>
+</body>
+</html>

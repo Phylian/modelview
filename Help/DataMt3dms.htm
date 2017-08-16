@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<title>MT3DMS Data Requirements</title>
+<style>@import url(style.css);</style>
+<!--Popup Control-->
+<OBJECT
+  id=popup 
+  type="application/x-oleobject"
+  classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"
+>
+</OBJECT>
+<!--Popup Text-->
+<SCRIPT Language=JavaScript>
+    PopupFont="Arial,10,,plain"
+    cinact="CINACT is the concentration assigned to inactive concentration cells."
+    savucn="SAVUCN specifies whether or not to save concentrations to unformatted (binary) file."
+</SCRIPT>
+</head>
+
+<body>
+
+<h1>MT3DMS Data Requirements</h1>
+
+<p>
+Date requirements for visualizing MT3DMS results are as follows:
+</p>
+
+<ul>
+<li>The input parameter 
+<A HREF="JavaScript:popup.TextPopup(cinact,PopupFont,9,9,-1,-1)">CINACT</a>
+must be assigned a value that is different 
+from simulated concentration at active cells. (<A href="#note1">See note 1 below.</a>)
+<li>The input parameter 
+<A HREF="JavaScript:popup.TextPopup(savucn,PopupFont,9,9,-1,-1)">SAVUCN</a>
+must be set to T in order to save concentrations.
+<li>Concentrations must be save at one or more transport 
+  time steps.          
+</ul>
+
+<h3>Note:</h3>
+
+<ol>
+<a name="note1"></a><li>If the simulated concentration at a cell is equal to 
+  CINACT, Model Viewer assumes that the cell is inactive and will not display 
+  it. Therefore, the common practice of setting CINACT to zero should be avoided 
+  if concentrations at active cells might also be zero. Another consideration is 
+  to avoid truncation error. For example, setting CINACT to 99.999 should be 
+  avoided because the output might not be written with adequate precision. 
+  Instead, it is recommended that CINACT be set to a large negative integer such 
+  as <nobr>-1.0E10</nobr>.         
+              
+            
+          
+          
+             
+          
+       
+</ol>
+
+</body>
+</html>

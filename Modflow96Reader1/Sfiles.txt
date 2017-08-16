@@ -1,0 +1,17 @@
+..\Modflow96Reader\Mf96Module.f 
+..\Modflow96Reader\MfBasic.f 
+..\Modflow96Reader\Mf96common.f 
+..\Modflow96Reader\Mc3CustomRead.f
+Modflow96Reader1.f 
+..\Modflow96Reader\bas5.for 
+..\Modflow96Reader\bcf5.for 
+..\Modflow96Reader\utl5.for 
+..\Modflow96Reader\chd1.for 
+..\Modflow96Reader\drn5.for 
+..\Modflow96Reader\fhb1.for 
+..\Modflow96Reader\ghb5.for 
+..\Modflow96Reader\ibs1.for 
+..\Modflow96Reader\res1.for 
+..\Modflow96Reader\riv5.for 
+..\Modflow96Reader\str1.for 
+..\Modflow96Reader\wel5.for

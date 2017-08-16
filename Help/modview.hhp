@@ -1,0 +1,96 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=modview.chm
+Contents file=toc.hhc
+Default Window=Default
+Default topic=Introduction.htm
+Display compile progress=No
+Full-text search=Yes
+Language=0x409 English (United States)
+Title=Help for Model Viewer 1.1
+
+[WINDOWS]
+Default="Model Viewer","toc.hhc",,"Introduction.htm",,,,,,0x2521,,0x300e,[382,228,959,744],,,,,,,0
+
+
+[FILES]
+ZoomRotatePan.htm
+ChangeInteractionMode.htm
+CopyToClipboard.htm
+DataVisualization.htm
+DisplaySize.htm
+GettingStarted.htm
+Introduction.htm
+Joystick.htm
+ModelDataRequirements.htm
+ModelFeatures.htm
+Pathlines.htm
+PresetDirections.htm
+Projection.htm
+ResetViewpoint.htm
+SaveViewpoint.htm
+ScalarData.htm
+Trackball.htm
+VectorData.htm
+ViewControl.htm
+AuxiliaryGraphicalObjects.htm
+Printing.htm
+ExportBitmap.htm
+ExportVrml.htm
+ExportAnimation.htm
+Isosurface.htm
+ColorBar.htm
+Solid.htm
+Threshold.htm
+Cropping.htm
+SampleNodFile.htm
+SampleEleFile.htm
+DataMoc3d.htm
+DataModflow2000.htm
+DataModflow96.htm
+DataModpath.htm
+DataMt3dms.htm
+LoadMf2kgwt.htm
+LoadMoc3d.htm
+LoadModflow2000.htm
+ExternalFileFormat.htm
+LoadModflow96.htm
+LoadModpath.htm
+LoadMt3dms.htm
+DataMf2kgwt.htm
+DataSutra.htm
+LoadSutra.htm
+LoadModelData.htm
+LayerElevationFile.htm
+TopElevationFile.htm
+BinaryDataType.htm
+Toolboxes.htm
+Toolbox_Data.htm
+Toolbox_Lighting.htm
+Toolbox_Vector.htm
+Toolbox_ColorBar.htm
+Toolbox_Crop.htm
+Toolbox_Geometry.htm
+Toolbox_Grid.htm
+Toolbox_Isosurface.htm
+Toolbox_ModelFeatures.htm
+Toolbox_Pathlines.htm
+Toolbox_Solid.htm
+Toolbox_Animation.htm
+UserInterface.htm
+ExportingAndPrinting.htm
+CoordinatesAndIndices.htm
+CellIndex.htm
+AxisSystem.htm
+GridlineIndex.htm
+MvFile.htm
+AllActiveCells.htm
+Quasi3DConfiningBed.htm
+Terminology.htm
+MovingModelData.htm
+SimulationTime.htm
+DataPhast.htm
+LoadPhast.htm
+
+[INFOTYPES]
+

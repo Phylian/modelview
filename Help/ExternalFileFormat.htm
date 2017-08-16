@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//ietf//dtd html//en//3.0">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>External File Format</title>
+  </head>
+  <body>
+    <h2>External File Format</h2>
+External files may be viewed in MODFLOW-2000 and MODFLOW-2005 models
+    <table border="">
+      <tbody>
+        <tr>
+          <td>Data set 1: Comments (Optional) </td>
+          <td>An unlimited number of blank lines or lines starting with
+            the character "#" may be included at the beginning of the
+            file. </td>
+        </tr>
+        <tr>
+          <td>Data Set 2: Format code </td>
+          <td>A format code of 1 must on the first non-comment line of
+            the file.The format code is used to distinguish between
+            different possible formats of the data. At present, only a
+            single format is accepted but in the future, additional
+            formats may be defined. </td>
+        </tr>
+        <tr>
+          <td>Data Set 3: Number of data sets </td>
+          <td>Specify the number of data sets in the file. </td>
+        </tr>
+        <tr>
+          <td>Data Set 4: Data set names </td>
+          <td>List the name of each data set on a separate line. Names
+            may be up to 17 characters long. Longer names will be
+            truncated. </td>
+        </tr>
+        <tr>
+          <td colspan="2">Repeat data sets 5 and 6 for each data set. </td>
+        </tr>
+        <tr>
+          <td>Data Set 5: NLAY, NROW, NCOL </td>
+          <td>
+            <ul>
+              <li>NLAY = number of layers. This must be either 1 or the
+                same as the number of layers in the model including
+                non-simulated layers between modeled layers. </li>
+              <li>NROW = number of rows. This must equal the number of
+                rows in the model.</li>
+              <li>NCOL = number of columns. This must equal the number
+                of columns in the model.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Data Set 6: Data </td>
+          <td>List the data for the data set starting at column=1,
+            row=1, layer=1, multiple values may be specified per line.
+            The data for each layer is specified as a group. Within each
+            layer, the data for each row is specified as a group. </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

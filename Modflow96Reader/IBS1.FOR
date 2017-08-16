@@ -1,0 +1,185 @@
+C FILE IBS1.F77 -- June, 1996 -- 3 statements in the version documented
+C   in TWRI 6-A2 have been modified in order to correct a problem.
+C   Although subsidence is only meant to be active for layers in which
+C   IBQ>0, some of the subroutines performed subsidence calculations when
+C   IBQ<0.  Note that this was a problem only if negative IBQ values
+C   were specified.  That is, the code has always worked correctly for
+C   IBQ=0 and IBQ>0.
+      SUBROUTINE IBS1AL(ISUM,LENX,LCHC,LCSCE,LCSCV,LCSUB,
+     1                  NCOL,NROW,NLAY,IIBSCB,IIBSOC,ISS,IN,IOUT,ierror)
+C
+C-----VERSION 07JUN1996 IBS1AL
+C-----VERSION 01AUG1996 -- modified to allow 200 layers instead of 80
+C     ******************************************************************
+C     ALLOCATE ARRAY STORAGE FOR INTERBED STORAGE PACKAGE
+C     ******************************************************************
+C
+C        SPECIFICATIONS:
+C     ------------------------------------------------------------------
+      DIMENSION IBQ1(200)
+      COMMON /IBSCOM/ IBQ(200)
+C     ------------------------------------------------------------------
+      ierror=0
+C
+C1------IDENTIFY PACKAGE.
+c###      WRITE(IOUT,1)IN
+    1 FORMAT(1H0,'IBS1 -- INTERBED STORAGE PACKAGE, VERSION 1,',
+     1     ' 06/07/96',' INPUT READ FROM UNIT',I3)
+C
+C2------CHECK TO SEE THAT INTERBED STORAGE OPTION IS APPROPRIATE
+      IF(ISS.EQ.0) GO TO 100
+C
+C3------IF INAPPROPRIATE PRINT A MESSAGE & CANCEL OPTION.
+c###      WRITE(IOUT,8)
+    8 FORMAT(1X,'INTERBED STORAGE INAPPROPRIATE FOR STEADY-STATE',
+     1 ' PROBLEM.',/,1X,'OPTION CANCELLED, SIMULATION CONTINUING.')
+      IN=0
+      RETURN
+C
+C4------READ FLAG FOR STORING CELL-BY-CELL STORAGE CHANGES AND
+C4------FLAG FOR PRINTING AND STORING COMPACTION, SUBSIDENCE, AND
+C4------CRITICAL HEAD ARRAYS.
+  100 READ(IN,3) IIBSCB,IIBSOC
+    3 FORMAT(2I10)
+C
+C5------IF CELL-BY-CELL TERMS TO BE SAVED THEN PRINT UNIT NUMBER.
+c###      IF(IIBSCB.GT.0) WRITE(IOUT,105) IIBSCB
+  105 FORMAT(1X,'CELL-BY-CELL FLOW TERMS WILL BE SAVED ON UNIT',I3)
+C
+C5A-----IF OUTPUT CONTROL FOR PRINTING ARRAYS IS SELECTED PRINT MESSAGE.
+c###      IF(IIBSOC.GT.0) WRITE(IOUT,106)
+  106 FORMAT(1X,'OUTPUT CONTROL RECORDS FOR IBS1 PACKAGE WILL BE ',
+     1 'READ EACH TIME STEP.')
+C
+C6------READ INDICATOR AND FIND OUT HOW MANY LAYERS HAVE INTERBED STORAGE.
+      READ(IN,110) (IBQ(K),K=1,NLAY)
+  110 FORMAT(40I2)
+      NAQL=0
+      DO 120 K=1,NLAY
+      IF(IBQ(K).LE.0) GO TO 120
+      NAQL=NAQL+1
+      IBQ1(NAQL)=K
+  120 CONTINUE
+C
+C7------IDENTIFY WHICH LAYERS HAVE INTERBED STORAGE.
+c###      WRITE(IOUT,130) (IBQ1(K),K=1,NAQL)
+  130 FORMAT(1X,'INTERBED STORAGE IN LAYER(S) ',80I2)
+C
+C8------ALLOCATE SPACE FOR THE ARRAYS HC, SCE, SCV, AND SUB.
+      IRK=ISUM
+      NA=NROW*NCOL*NAQL
+      LCHC=ISUM
+      ISUM=ISUM+NA
+      LCSCE=ISUM
+      ISUM=ISUM+NA
+      LCSCV=ISUM
+      ISUM=ISUM+NA
+      LCSUB=ISUM
+      ISUM=ISUM+NA
+C
+C9------CALCULATE & PRINT AMOUNT OF SPACE USED BY PACKAGE.
+  300 IRK=ISUM-IRK
+c###      WRITE(IOUT,4)IRK
+    4 FORMAT(1X,I8,' ELEMENTS OF X ARRAY USED FOR INTERBED STORAGE')
+      ISUM1=ISUM-1
+c###      WRITE(IOUT,5)ISUM1,LENX
+    5 FORMAT(1X,I8,' ELEMENTS OF X ARRAY USED OUT OF',I8)
+c###      IF(ISUM1.GT.LENX)WRITE(IOUT,6)
+    6 FORMAT(1X,'   ***X ARRAY MUST BE MADE LARGER***')
+C
+C10-----RETURN.
+      RETURN
+      END
+      SUBROUTINE IBS1RP(DELR,DELC,HNEW,HC,SCE,SCV,SUB,NCOL,NROW,
+     1                  NLAY,NODES,IIBSOC,ISUBFM,ICOMFM,IHCFM,
+     2                  ISUBUN,ICOMUN,IHCUN,IN,IOUT,ierror)
+C
+C-----VERSION 1117 02JUN1988 IBS1RP
+C-----VERSION 01AUG1996 -- modified to allow 200 layers instead of 80
+C     ******************************************************************
+C     READ INTERBED STORAGE DATA
+C     ******************************************************************
+C
+C        SPECIFICATIONS:
+C     ------------------------------------------------------------------
+      CHARACTER*4 ANAME
+c      DOUBLE PRECISION HNEW
+      DIMENSION HNEW(NODES),HC(NODES),SCE(NODES),
+     1       SCV(NODES),SUB(NODES),ANAME(6,4),
+     2       DELR(NCOL),DELC(NROW)
+C
+      COMMON /IBSCOM/ IBQ(200)
+C
+      DATA ANAME(1,1),ANAME(2,1),ANAME(3,1),ANAME(4,1),ANAME(5,1),
+     1  ANAME(6,1) /'   P','RECO','NSOL','IDAT','ION ','HEAD'/
+      DATA ANAME(1,2),ANAME(2,2),ANAME(3,2),ANAME(4,2),ANAME(5,2),
+     1  ANAME(6,2) /'ELAS','TIC ','INTE','RBED',' STO','RAGE'/
+      DATA ANAME(1,3),ANAME(2,3),ANAME(3,3),ANAME(4,3),ANAME(5,3),
+     1  ANAME(6,3) /' VIR','GIN ','INTE','RBED',' STO','RAGE'/
+      DATA ANAME(1,4),ANAME(2,4),ANAME(3,4),ANAME(4,4),ANAME(5,4),
+     1  ANAME(6,4) /'    ',' STA','RTIN','G CO','MPAC','TION'/
+C     ------------------------------------------------------------------
+      error=0
+C
+C1------READ IN STORAGE AND CRITICAL HEAD ARRAYS
+      NIJ=NROW*NCOL
+      KQ=0
+      DO 60 K=1,NLAY
+      IF(IBQ(K).LE.0) GO TO 60
+      KQ=KQ+1
+      LOC=1+(KQ-1)*NIJ
+      CALL U2DREL(HC(LOC),ANAME(1,1),NROW,NCOL,K,IN,IOUT)
+      CALL U2DREL(SCE(LOC),ANAME(1,2),NROW,NCOL,K,IN,IOUT)
+      CALL U2DREL(SCV(LOC),ANAME(1,3),NROW,NCOL,K,IN,IOUT)
+      CALL U2DREL(SUB(LOC),ANAME(1,4),NROW,NCOL,K,IN,IOUT)
+   60 CONTINUE
+C
+C2------LOOP THROUGH ALL CELLS WITH INTERBED STORAGE.
+      KQ=0
+      DO 80 K=1,NLAY
+      IF(IBQ(K).LE.0) GO TO 80
+      KQ=KQ+1
+      NQ=(KQ-1)*NIJ
+      NK=(K-1)*NIJ
+      DO 70 IR=1,NROW
+      NQR=NQ+(IR-1)*NCOL
+      NKR=NK+(IR-1)*NCOL
+      DO 70 IC=1,NCOL
+      LOC=NQR+IC
+      LOCH=NKR+IC
+C
+C3------MULTIPLY STORAGE BY AREA TO GET STORAGE CAPACITY.
+      AREA=DELR(IC)*DELC(IR)
+      SCE(LOC)=SCE(LOC)*AREA
+      SCV(LOC)=SCV(LOC)*AREA
+C
+C4------MAKE SURE THAT PRECONSOLIDATION HEAD VALUES
+C4------ARE CONSISTANT WITH STARTING HEADS.
+      IF(HC(LOC).GT.HNEW(LOCH)) HC(LOC)=HNEW(LOCH)
+   70 CONTINUE
+   80 CONTINUE
+C
+C5------INITIALIZE AND READ OUTPUT FLAGS.
+      ICOMFM=0
+      ISUBFM=0
+      IHCFM=0
+      ICOMUN=0
+      ISUBUN=0
+      IHCUN=0
+      IF(IIBSOC.LE.0) GO TO 200
+      READ(IN,100) ISUBFM,ICOMFM,IHCFM,ISUBUN,ICOMUN,IHCUN
+  100 FORMAT(6I10)
+c###      WRITE(IOUT,110) ISUBFM,ICOMFM,IHCFM
+  110 FORMAT(1H0,'    SUBSIDENCE PRINT FORMAT IS NUMBER',I4/
+     1          '     COMPACTION PRINT FORMAT IS NUMBER',I4/
+     2          '  CRITICAL HEAD PRINT FORMAT IS NUMBER',I4)
+c###      IF(ISUBUN.GT.0) WRITE(IOUT,120) ISUBUN
+  120 FORMAT(1H0,'    UNIT FOR SAVING SUBSIDENCE IS',I4)
+c###      IF(ICOMUN.GT.0) WRITE(IOUT,130) ICOMUN
+  130 FORMAT(1H ,'    UNIT FOR SAVING COMPACTION IS',I4)
+c###      IF(IHCUN.GT.0)  WRITE(IOUT,140) IHCUN
+  140 FORMAT(1H ,' UNIT FOR SAVING CRITICAL HEAD IS',I4)
+C
+C6------RETURN
+  200 RETURN
+      END

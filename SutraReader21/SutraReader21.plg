@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SutraReader21 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP7F.tmp" with contents
+[
+/assume:underscore /browser:"Debug/" /check:bounds /compile_only /debug:full /include:"Debug/" /dll /names:lowercase /nologo /traceback /warn:argument_checking /warn:nofileopt /module:"Debug/" /object:"Debug/" /pdbfile:"Debug/DF60.PDB" 
+"D:\Mv\mv_branch2\SutraReader21\sutra_2_1.f"
+]
+Creating temporary file "C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP80.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /profile /debug /machine:I386 /out:"Debug/sutr_r21.dll" /implib:"Debug/sutr_r21.lib" 
+.\Debug\fmods_2_1.obj
+.\Debug\sutra_2_1.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP80.tmp"
+<h3>Output Window</h3>
+Compiling Fortran...
+D:\Mv\mv_branch2\SutraReader21\sutra_2_1.f
+Linking...
+   Creating library Debug/sutr_r21.lib and object Debug/sutr_r21.exp
+Creating temporary file "C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP84.bat" with contents
+[
+@echo off
+copy .\Debug\sutr_r21.dll ..\ModelViewer\Debug\sutr_r21.dll
+]
+Creating command line "C:\DOCUME~1\RBWINS~2\LOCALS~1\Temp\RSP84.bat"
+
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+sutr_r21.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

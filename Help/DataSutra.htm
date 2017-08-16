@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<title>SUTRA (Version 2D3D.1) Data Requirements</title>
+<style>@import url(style.css);</style>
+</head>
+
+<body>
+
+<h1>SUTRA (Version 2.0 - 2.2) Data Requirements</h1>
+
+<p>
+Date requirements for visualizing SUTRA (Version 2D3D.1) results are as follows:
+</p>
+
+<ul>
+
+<li>Nodewise results must be saved in a "nod" file. For a 3D 
+  mesh,&nbsp;the&nbsp;"nod"&nbsp;file must contain 4, 5 or 6 columns of data in the order
+specified below. These columns are (<A href="SampleNodFile.htm">See sample "nod" file</A>.):
+<ol>
+<li>x coordinate of node (required) 
+    
+<li>y coordinate of node (required) 
+    
+<li>z coordinate of node (required) 
+    
+<li>pressure, concentration, temperature, or saturation 
+    at node (required) 
+    
+<li>pressure, concentration, temperature, or saturation 
+    at node (optional) 
+    
+<li>pressure, concentration, temperature, or saturation 
+    at node (optional)</li>       
+</ol>For a 2D mesh, the z coordinate is not needed.</li>
+
+         
+
+</ul>
+
+<ul>
+<li>Elementwise results must be saved in an "ele" file.
+ For a 3D mesh, 
+  the "ele" file&nbsp;must 
+  contain 6
+columns of data in the order specified below. These columns are (<A href="SampleEleFile.htm">See sample "ele" file</A>):
+<ol>
+<li>x coordinate of element center 
+    
+<li>y coordinate of element center 
+    
+<li>z coordinate of element center 
+    
+<li>x component of velocity at element center 
+    
+<li>y component of velocity at element center 
+    
+<li>z component of velocity at element center</li>      
+</ol></li>
+For a 2D mesh, the z coordinate is not needed.
+
+<li >The data for the "nod" and "ele" files must be saved at identical time steps.</li>
+</ul>
+
+</body>
+</html>

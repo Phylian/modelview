@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<title>PHAST Data Requirements</title>
+<style>@import url(style.css);</style>
+<!--Popup Control-->
+<OBJECT
+  id=popup
+  type="application/x-oleobject"
+  classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"
+>
+</OBJECT>
+<!--Popup text-->
+<SCRIPT Language=JavaScript>
+    PopupFont="Arial,10,,plain"
+</SCRIPT>
+</head>
+
+<body>
+
+<h1>PHAST Data Requirements</h1>
+
+<p>
+  Data requirements for visualizing PHAST results are as follows:
+</p>
+
+<ul>
+<li>
+  Only data that is stored within the HDF output file (<i>prefix.</i><b>h5</b>)
+  can be displayed within Model Viewer.
+</li>
+<li>
+  Writing of initial-condition heads and chemical data is controlled by the identifiers
+  <b>-HDF_heads</b> and <b>-HDF_chemistry</b> in the <b>PRINT_INITIAL</b> data block.
+  By default, initial-condition heads and chemical data are written to the file.
+</li>
+<li>
+  If steady-state flow is simulated, the steady-state velocities at nodes can be written
+  to the HDF file by using the <b>-HDF_steady_flow_velocities</b> identifier of the
+  <b>PRINT_INITIAL</b> data block. By default, steady-state flow velocities are not
+  written to the file.
+</li>
+
+<li>
+  During the simulation, heads, nodal velocities, and chemical data are written at
+  selected frequencies as defined by the <b>-HDF_heads</b>, <b>-HDF_velocities</b>, and
+  <b>-HDF_chemistry</b> identifiers in the <b>PRINT_FREQUENCY</b> data block. By default,
+  the heads, velocities, and chemistry data are written to the HDF file at the end of
+  each simulation period.  If steady-state flow is simulated, the heads and velocities
+  will be written only once. The chemical data to be written to the HDF file are
+  defined in the <b>SELECTED_OUTPUT</b> data block of the chemistry data file and by
+  Basic-language programs in the <b>USER_PUNCH</b> data block of the chemistry data file.
+</li>
+
+</ul>
+
+</body>
+</html>
