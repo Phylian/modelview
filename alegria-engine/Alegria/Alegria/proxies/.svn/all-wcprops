@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/167/Alegria/Alegria/proxies
+END
+APY_RenderCompProxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/152/Alegria/Alegria/proxies/APY_RenderCompProxy.cpp
+END
+APY_KeyboardCompProxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/152/Alegria/Alegria/proxies/APY_KeyboardCompProxy.cpp
+END
+APY_InterfaceProxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/152/Alegria/Alegria/proxies/APY_InterfaceProxy.cpp
+END
+APY_EntityProxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/166/Alegria/Alegria/proxies/APY_EntityProxy.hpp
+END
+APY_Utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/152/Alegria/Alegria/proxies/APY_Utils.hpp
+END
+APY_RenderCompProxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/167/Alegria/Alegria/proxies/APY_RenderCompProxy.hpp
+END
+APY_KeyboardCompProxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/165/Alegria/Alegria/proxies/APY_KeyboardCompProxy.hpp
+END
+APY_InterfaceProxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/167/Alegria/Alegria/proxies/APY_InterfaceProxy.hpp
+END
+APY_PhysicsCompProxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/167/Alegria/Alegria/proxies/APY_PhysicsCompProxy.hpp
+END
+APY_MessageCompProxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/152/Alegria/Alegria/proxies/APY_MessageCompProxy.hpp
+END
+APY_MouseCompProxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/152/Alegria/Alegria/proxies/APY_MouseCompProxy.hpp
+END
+APY_SoundCompProxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/166/Alegria/Alegria/proxies/APY_SoundCompProxy.hpp
+END
+APY_EntityProxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/152/Alegria/Alegria/proxies/APY_EntityProxy.cpp
+END

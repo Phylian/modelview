@@ -1,0 +1,23 @@
+#summary Introduction to Alegria.
+#labels Featured
+
+
+== What is Alegria? ==
+Alegria is an opensource 2D Game Engine made with C++. It's being developed by me (J.G. Camarasa) as a personal project with didactic purposes. 
+
+Development started around summer of 2010 and a year later has reached a point were it's becoming usable.
+
+
+
+== What platforms does Alegria run on? ==
+Right now Alegria only runs on Windows, and that's how it's likely to remain (unless someone volunteers to port the platform-specific code).
+
+
+
+== Using the engine ==
+You can visit the [http://code.google.com/p/alegria-engine/wiki/UserGuide User Guide] (currently under development). Note that in order to use the engine you need to have a minimum (just a little, I promise!) of knowledge of [http://www.python.org Python] as it's the scripting language of choice.
+
+
+
+== Extending the engine ==
+You can visit the Developer's Guide (same)
