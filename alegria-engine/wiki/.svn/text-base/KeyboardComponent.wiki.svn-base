@@ -1,0 +1,18 @@
+#summary Information about the Keyboard component.
+
+= Introduction =
+
+The Keyboard component gives the entity access to the key states. With its condition, the user can trigger a script when a key is pressed.
+
+= Parameters =
+This component has no parameters.
+
+= Condition =
+
+Pressed keys are what make Keyboard conditions positive. A single key can be specified, or either all keys through the "all" parameter.
+
+|| *Parameter* || *Type* || *Description* ||
+|| key         || int    || The key that will make the condition positive ||
+|| all         || bool   || If true, any key will make the condition positive ||
+
+Note that with the omega parameter you can set key repetition.

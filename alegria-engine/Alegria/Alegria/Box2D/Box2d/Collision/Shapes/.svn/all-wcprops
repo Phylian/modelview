@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/152/Alegria/Alegria/Box2D/Box2d/Collision/Shapes
+END
+b2Shape.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/152/Alegria/Alegria/Box2D/Box2d/Collision/Shapes/b2Shape.h
+END
+b2CircleShape.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/152/Alegria/Alegria/Box2D/Box2d/Collision/Shapes/b2CircleShape.h
+END
+b2PolygonShape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/152/Alegria/Alegria/Box2D/Box2d/Collision/Shapes/b2PolygonShape.cpp
+END
+b2PolygonShape.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/152/Alegria/Alegria/Box2D/Box2d/Collision/Shapes/b2PolygonShape.h
+END
+b2CircleShape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/152/Alegria/Alegria/Box2D/Box2d/Collision/Shapes/b2CircleShape.cpp
+END
